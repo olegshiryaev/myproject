@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-!mj@)@8_5xx(owwk2zp4r0p!r##vy+syai_@lkh%svx71j_f=$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '185.195.24.24', 'shiryaev.tech', 'www.shiryaev.tech']
+ALLOWED_HOSTS = ['localhost', '185.195.24.24',
+                 'shiryaev.tech', 'www.shiryaev.tech']
 
 
 # Application definition
@@ -40,8 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.http',
     'django_extensions',
-    'AppOne',
-    'blog',
+    'movie_app',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +59,9 @@ ROOT_URLCONF = 'myproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
